@@ -7,7 +7,7 @@ import requests,os
 from sys import argv
 
 import config
-from utils.serverchan_push import push_to_wechat
+from utils.pushplus import push_to_wechat
 
 class SMZDM_Bot(object):
     def __init__(self):
@@ -60,7 +60,8 @@ if __name__ == '__main__':
     print('PUSHPLUS_TOKEN: ', PUSHPLUS_TOKEN)
     if isinstance(PUSHPLUS_TOKEN,str) and len(PUSHPLUS_TOKEN)>0:
         print('检测到 PUSHPLUS_TOKEN， 准备推送')
-        push_to_wechat(text = '什么值得买每日签到',
-                        desp = str(res),
-                        secretKey = PUSHPLUS_TOKEN)
+        push_to_wechat( PUSHPLUS_TOKEN,
+                       '什么值得买每日签到',
+                        str(res),
+                        )
     print('代码完毕')
