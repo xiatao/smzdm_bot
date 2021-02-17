@@ -57,7 +57,7 @@ if __name__ == '__main__':
     res = sb.checkin()
     print(res)
     PUSHPLUS_TOKEN = os.environ["PUSHPLUS_TOKEN"]
-    print('PUSHPLUS_TOKEN: ', PUSHPLUS_TOKEN)
+    #print('PUSHPLUS_TOKEN: ', PUSHPLUS_TOKEN)
     if isinstance(PUSHPLUS_TOKEN,str) and len(PUSHPLUS_TOKEN)>0:
         print('检测到 PUSHPLUS_TOKEN， 准备推送')
         push_to_wechat( PUSHPLUS_TOKEN,
