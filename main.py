@@ -7,7 +7,7 @@ import requests,os
 from sys import argv
 
 import config
-from utils.serverchan_push.py import push_to_wechat
+from utils.serverchan_push import push_to_wechat
 
 class SMZDM_Bot(object):
     def __init__(self):
